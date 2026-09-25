@@ -10,7 +10,8 @@ jobs:
 
     steps:
       - name: Afficher un message
-        run: echo "Bonjour depuis ci-learn : ${{ github.sha }}"      # remplace par le nom de ton dépôt
+        run: |
+          echo "Bonjour depuis ci-learn : ${{ github.sha }}"
 
       - name: Qui suis-je ?
         run: |
