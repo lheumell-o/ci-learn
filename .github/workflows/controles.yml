@@ -3,7 +3,7 @@ name: Contrôles
 on:
   push:                        # au push sur main
     branches: [main]
-  # pull_request:                        # et à chaque pull request
+    pull_request:                        # et à chaque pull request
 
 jobs:
   lint:
