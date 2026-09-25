@@ -1,0 +1,19 @@
+name: bonjour                      # le nom affiché dans l'onglet Actions
+
+on:
+  push:                         # l'événement : que se passe-t-il pour lancer ce workflow ?
+    branches: [main]
+
+jobs:
+  dire-bonjour:                 # le nom du job, libre
+    runs-on: ubuntu-latest               # la machine : ubuntu-latest
+
+    steps:
+      - name: Afficher un message
+        run: echo "Bonjour depuis learn-ci : ${{COMMIT}}"      # remplace par le nom de ton dépôt
+
+      - name: Qui suis-je ?
+        run: |
+          echo "Machine : $(uname -a)"
+          echo "Répertoire : $(pwd)"
+          echo "Commit : ${{ github.sha }}"
